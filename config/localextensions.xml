@@ -1,7 +1,7 @@
 <hybrisconfig xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:noNamespaceSchemaLocation='../bin/platform/resources/schemas/extensions.xsd'>
   <extensions>
     <path dir='${HYBRIS_BIN_DIR}' autoload='false' />
-    <extension name='yb2bacceleratorstorefront' />
+	    <!--  <extension name='yb2bacceleratorstorefront' /> -->
     <extension name='adaptivesearch' />
     <extension name='adaptivesearchbackoffice' />
     <extension name='adaptivesearchfacades' />
@@ -54,13 +54,15 @@
     <extension name='backoffice' />
     <extension name='backofficesolrsearch' />
     <extension name='platformbackoffice' />
-    <extension name='ybackoffice' />
+	    
+	    <!-- <extension name='ybackoffice' />
     <extension name='yacceleratorbackoffice' />
     <extension name='yacceleratorcore' />
     <extension name='yacceleratorfacades' />
     <extension name='yacceleratorinitialdata' />
     <extension name='yacceleratorstorefront' />
-    <extension name='yaddon' />
+    <extension name='yaddon' /> -->
+
     <extension name='basecommerce' />
     <extension name='basecommercebackoffice' />
     <extension name='customerreview' />
@@ -84,8 +86,8 @@
     <extension name='commercewebservices' />
     <extension name='commercewebservicescommons' />
     <extension name='commercewebservicestests' />
-    <extension name='yocc' />
-    <extension name='yocctests' />
+    <!-- <extension name='yocc' />
+    <extension name='yocctests' /> -->
     <extension name='configurablebundleaddon' />
     <extension name='configurablebundlebackoffice' />
     <extension name='configurablebundlefacades' />
@@ -175,7 +177,7 @@
     <extension name='warehousingbackoffice' />
     <extension name='warehousingfacades' />
     <extension name='warehousingwebservices' />
-    <extension name='yacceleratorordermanagement' />
+	    <!--  <extension name='yacceleratorordermanagement' /> -->
     <extension name='personalizationcms' />
     <extension name='personalizationcmsbackoffice' />
     <extension name='personalizationcmsweb' />
@@ -279,5 +281,15 @@
     <extension name='xyformsservices' />
     <extension name='xyformsstorefrontcommons' />
     <extension name='xyformsweb' />
+
+	    <!-- Custom B2b Storefront -->
+    <extension name="b2bstorecore"/>
+    <extension name="b2bstorebackoffice"/>
+    <extension name="b2bstorefacades"/>
+    <extension name="b2bstorefulfilmentprocess"/>
+    <extension name="b2bstoreinitialdata"/>
+    <extension name="b2bstoretest"/>
+    <extension name="b2bstorestorefront"/>
+
   </extensions>
 </hybrisconfig>
