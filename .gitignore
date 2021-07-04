@@ -21,3 +21,53 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+#Root Folders
+/data/
+/log/
+/temp/
+
+#Compiled Class files and resources
+
+classes/
+testclasses/
+eclipsebin/
+
+#Build-regenerated source files
+
+gensrc/
+
+# Storefront build files
+package-lock.json
+node_modules/
+
+#Config
+/config/solr/
+/config/backup/
+/config/local.properties
+/config/licence/**
+!config/licence/hybrislicence.jar
+/config/orbeon/
+
+#Only custom resource extensions
+
+/bin/*
+!bin/custom/
+
+#Exclude build-regenerated jalo files
+**/jalo/*
+# but keep one-time-generated jalo classes
+!*Manager.java
+!*Test.java
+!*Factory.java
+
+#Exlucde build regenerated misc files
+bin/custom/**/build.xml
+extensioninfo.xsd
+beans.xsd
+items.xsd
+platformhome.properties
+*-webtestclasses.xml
+*-testclasses.xml
+.lastupate
+!generatedVariables.*
