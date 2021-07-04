@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+ Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved.
+-->
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="beans.xsd">
+
+	<enum class="org.b2bstorecommercewebservices.populator.options.PaymentInfoOption">
+		<value>BASIC</value>
+		<value>BILLING_ADDRESS</value>
+	</enum>
+
+	<!--auth response  -->
+	<bean class="org.b2bstorecommercewebservices.auth.data.LogoutResponse">
+		<property name="success" type="boolean"/>
+	</bean>
+
+	<!-- storesession data -->
+
+	<bean class="org.b2bstorecommercewebservices.storesession.data.LanguageDataList">
+		<property name="languages"
+		          type="java.util.Collection&lt;de.hybris.platform.commercefacades.storesession.data.LanguageData>"/>
+	</bean>
+
+	<bean class="org.b2bstorecommercewebservices.storesession.data.CurrencyDataList">
+		<property name="currencies"
+		          type="java.util.Collection&lt;de.hybris.platform.commercefacades.storesession.data.CurrencyData>"/>
+	</bean>
+
+	<!-- order data -->
+
+	<bean class="org.b2bstorecommercewebservices.order.data.CartDataList">
+		<property name="carts"
+		          type="java.util.List&lt;de.hybris.platform.commercefacades.order.data.CartData>"/>
+	</bean>
+
+	<bean class="org.b2bstorecommercewebservices.order.data.OrderEntryDataList">
+		<property name="orderEntries"
+		          type="java.util.List&lt;de.hybris.platform.commercefacades.order.data.OrderEntryData>"/>
+	</bean>
+
+	<bean class="org.b2bstorecommercewebservices.order.data.CardTypeDataList">
+		<property name="cardTypes"
+		          type="java.util.List&lt;de.hybris.platform.commercefacades.order.data.CardTypeData>"/>
+	</bean>
+
+	<!-- product data -->
+
+	<bean class="org.b2bstorecommercewebservices.product.data.ProductDataList">
+		<property name="products"
+		          type="java.util.List&lt;de.hybris.platform.commercefacades.product.data.ProductData>"/>
+		<property name="catalog" type="String"/>
+		<property name="version" type="String"/>
+		<property name="totalProductCount" type="int"/>
+		<property name="totalPageCount" type="int"/>
+		<property name="currentPage" type="int"/>
+	</bean>
+
+	<bean class="org.b2bstorecommercewebservices.product.data.PromotionDataList">
+		<property name="promotions"
+		          type="java.util.List&lt;de.hybris.platform.commercefacades.product.data.PromotionData>"/>
+	</bean>
+
+	<bean class="org.b2bstorecommercewebservices.product.data.PromotionResultDataList">
+		<property name="promotions"
+		          type="java.util.List&lt;de.hybris.platform.commercefacades.product.data.PromotionResultData>"/>
+	</bean>
+
+	<bean class="org.b2bstorecommercewebservices.product.data.ReviewDataList">
+		<property name="reviews" type="java.util.List&lt;de.hybris.platform.commercefacades.product.data.ReviewData>"/>
+	</bean>
+
+	<bean class="org.b2bstorecommercewebservices.product.data.SuggestionDataList">
+		<property name="suggestions"
+		          type="java.util.List&lt;de.hybris.platform.commercefacades.product.data.SuggestionData>"/>
+	</bean>
+
+	<!-- user data -->
+
+	<bean class="org.b2bstorecommercewebservices.user.data.TitleDataList">
+		<property name="titles" type="java.util.List&lt;de.hybris.platform.commercefacades.user.data.TitleData>"/>
+	</bean>
+
+	<bean class="org.b2bstorecommercewebservices.user.data.CountryDataList">
+		<property name="countries" type="java.util.List&lt;de.hybris.platform.commercefacades.user.data.CountryData>"/>
+	</bean>
+
+	<bean class="org.b2bstorecommercewebservices.user.data.RegionDataList">
+		<property name="regions"
+				  type="java.util.List&lt;de.hybris.platform.commercefacades.user.data.RegionData>"/>
+	</bean>
+
+	<bean class="org.b2bstorecommercewebservices.user.data.AddressDataList">
+		<property name="addresses" type="java.util.List&lt;de.hybris.platform.commercefacades.user.data.AddressData>"/>
+	</bean>
+
+	<!-- voucher data -->
+	<bean class="org.b2bstorecommercewebservices.voucher.data.VoucherDataList">
+		<property name="vouchers"
+		          type="java.util.List&lt;de.hybris.platform.commercefacades.voucher.data.VoucherData>"/>
+	</bean>
+
+	<!-- validation data -->
+	<bean class="org.b2bstorecommercewebservices.validation.data.AddressValidationData">
+		<property name="errors" type="de.hybris.platform.webservicescommons.dto.error.ErrorListWsDTO"/>
+		<property name="decision" type="String"/>
+		<property name="suggestedAddressesList"
+		          type="org.b2bstorecommercewebservices.user.data.AddressDataList"/>
+	</bean>
+
+	<bean class="org.b2bstorecommercewebservices.validation.data.CartVoucherValidationData">
+		<property name="subject" type="String" />
+	</bean>
+
+	<bean class="org.b2bstorecommercewebservices.validation.data.CartVoucherValidationDataList">
+		<property name="CartVoucherValidationDataList"
+				  type="java.util.List&lt;org.b2bstorecommercewebservices.validation.data.CartVoucherValidationData>"/>
+	</bean>
+
+	<bean class="org.b2bstorecommercewebservices.user.data.LoginChangeResponse">
+		<property name="success" type="boolean"/>
+	</bean>
+
+	<bean class="org.b2bstorecommercewebservices.user.data.PasswordRestoreResponse">
+		<property name="success" type="boolean"/>
+	</bean>
+
+	<!-- update queues -->
+
+	<bean class="org.b2bstorecommercewebservices.queues.data.ProductExpressUpdateElementData">
+		<property name="code" type="String"/>
+		<property name="catalogId" type="String"/>
+		<property name="catalogVersion" type="String"/>
+	</bean>
+
+	<bean class="org.b2bstorecommercewebservices.queues.data.ProductExpressUpdateElementDataList">
+		<property name="productExpressUpdateElements"
+		          type="java.util.List&lt;org.b2bstorecommercewebservices.queues.data.ProductExpressUpdateElementData>"/>
+	</bean>
+
+	<bean class="org.b2bstorecommercewebservices.queues.data.OrderStatusUpdateElementData">
+		<property name="code" type="String"/>
+		<property name="status" type="String"/>
+		<property name="baseSiteId" type="String"/>
+	</bean>
+
+	<bean class="org.b2bstorecommercewebservices.queues.data.OrderStatusUpdateElementDataList">
+		<property name="orderStatusUpdateElements"
+		          type="java.util.List&lt;org.b2bstorecommercewebservices.queues.data.OrderStatusUpdateElementData>"/>
+	</bean>
+
+	<bean class="org.b2bstorecommercewebservices.store.data.StoreCountListData">
+		<property name="countriesAndRegionsStoreCount"
+				  type="java.util.List&lt;de.hybris.platform.commercefacades.store.data.StoreCountData>"/>
+	</bean>
+
+	<!-- Consent management -->
+	<bean class="org.b2bstorecommercewebservices.consent.data.ConsentTemplateDataList">
+		<property name="consentTemplates"
+				  type="java.util.List&lt;de.hybris.platform.commercefacades.consent.data.ConsentTemplateData>"/>
+	</bean>
+
+	<!-- Base Sites -->
+	<bean class="org.b2bstorecommercewebservices.basesite.data.BaseSiteDataList">
+		<property name="baseSites"
+				  type="java.util.List&lt;de.hybris.platform.commercefacades.basesite.data.BaseSiteData>"/>
+	</bean>
+
+	<bean class="org.b2bstorecommercewebservices.returns.data.ReturnRequestsData">
+		<property name="returnRequests"
+				  type="java.util.List&lt;de.hybris.platform.ordermanagementfacades.returns.data.ReturnRequestData>"/>
+		<property name="sorts" type="java.util.List&lt;de.hybris.platform.commerceservices.search.pagedata.SortData>"/>
+		<property name="pagination" type="de.hybris.platform.commerceservices.search.pagedata.PaginationData"/>
+	</bean>
+
+</beans>
